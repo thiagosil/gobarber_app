@@ -5,7 +5,7 @@ export const Container = styled.View`
   flex: 1;
   align-items: center;
   justify-content: center;
-  padding: 0 30px;
+  padding: 0 30px 110px;
 `;
 
 export const Title = styled.Text`
@@ -35,7 +35,7 @@ export const CreateAccountButton = styled.TouchableOpacity`
   background: #312e38;
   border-top-width: 1px;
   border-color: #232129;
-  padding: 16px 0 ${16 + getBottomSpace()}px
+  padding: 16px 0 ${16 + getBottomSpace()}px;
   justify-content: center;
   align-items: center;
   flex-direction: row;
