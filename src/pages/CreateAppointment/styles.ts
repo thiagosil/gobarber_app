@@ -7,9 +7,20 @@ import { Provider } from './index';
 interface ProviderContainerProps {
   selected: boolean;
 }
+
 interface ProviderNameProps {
   selected: boolean;
 }
+
+interface HourProps {
+  available: boolean;
+  selected: boolean;
+}
+
+interface HourTextProps {
+  selected: boolean;
+}
+
 export const Container = styled.View`
   flex: 1;
 `;
@@ -82,4 +93,44 @@ export const Title = styled.Text`
   color: #f4ede8;
   font-size: 24px;
   margin: 0 24px 24px;
+`;
+
+export const Content = styled.ScrollView``;
+
+export const Schedule = styled.View`
+  padding: 24px 0 16px;
+`;
+
+export const Section = styled.View`
+  margin-bottom: 24px;
+`;
+
+export const SectionTitle = styled.Text`
+  font-family: 'RobotoSlab-Regular';
+  color: #999591;
+  font-size: 18px;
+  margin: 0 24px 12px;
+`;
+
+export const SectionContent = styled.ScrollView.attrs({
+  contentContainerStyle: { paddingHorizontal: 24 },
+  horizontal: true,
+  showsHorizontalScrollIndicator: false,
+})``;
+
+export const Hour = styled(RectButton)<HourProps>`
+  padding: 12px;
+  background: ${(props: HourProps): string =>
+    props.selected ? '#FF9000' : '#3e3b47'};
+  border-radius: 10px;
+  margin-right: 8px;
+
+  opacity: ${(props: HourProps): number => (props.available ? 1 : 0.3)};
+`;
+
+export const HourText = styled.Text<HourTextProps>`
+  color: ${(props: HourTextProps): string =>
+    props.selected ? '#232129' : '#f3ede8'};
+  font-family: 'RobotoSlab-Regular';
+  font-size: 16px;
 `;
