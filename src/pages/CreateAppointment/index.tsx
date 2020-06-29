@@ -189,16 +189,6 @@ const CreateAppointment: React.FC = () => {
           />
         </Calendar>
 
-        {/* {showDatePicker && (
-        <DateTimePicker
-          value={selectedDate}
-          mode="date"
-          display="calendar"
-          textColor="#F4ede8"
-          onChange={handleDateChanged}
-        />
-      )} */}
-
         <Schedule>
           <Title>Escolha o horário</Title>
 
