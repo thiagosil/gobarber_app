@@ -56,6 +56,7 @@
     "metro-react-native-babel-preset": "^0.58.0",
     "prettier": "^2.0.5",
     "react-test-renderer": "16.11.0",
+    "rn-async-storage-flipper": "^0.0.9",
     "typescript": "^3.8.3"
   },
   "jest": {
